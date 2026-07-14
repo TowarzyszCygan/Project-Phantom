@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PROJECT PHANTOM - Browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar (Left) -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span class="logo-icon">👻</span>
+        <span class="logo-text">PHANTOM</span>
+      </div>
+      <nav class="sidebar-nav">
+        <button class="nav-btn active" data-page="home">
+          <span class="icon">🏠</span>
+          <span class="label">Home</span>
+        </button>
+        <button class="nav-btn" data-page="search">
+          <span class="icon">🔍</span>
+          <span class="label">Wyszukaj</span>
+        </button>
+        <button class="nav-btn" data-page="discord">
+          <span class="icon">💬</span>
+          <span class="label">Discord</span>
+        </button>
+        <button class="nav-btn" data-page="messenger">
+          <span class="icon">✉️</span>
+          <span class="label">Messenger</span>
+        </button>
+        <button class="nav-btn" data-page="history">
+          <span class="icon">⏰</span>
+          <span class="label">Historia</span>
+        </button>
+        <button class="nav-btn" data-page="settings">
+          <span class="icon">⚙️</span>
+          <span class="label">Ustawienia</span>
+        </button>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <div class="url-bar">
+          <input 
+            type="text" 
+            id="urlInput" 
+            class="url-input" 
+            placeholder="Wpisz URL lub wyszukaj..."
+          />
+          <button class="url-btn">→</button>
+        </div>
+        <div class="top-bar-controls">
+          <button class="control-btn">⬅️</button>
+          <button class="control-btn">➡️</button>
+          <button class="control-btn">🔄</button>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="content">
+        <section id="home-page" class="page active">
+          <div class="home-container">
+            <h1 class="phantom-title">PROJECT PHANTOM</h1>
+            <p class="phantom-subtitle">Bezpieczna przeglądarka z AI</p>
+            <div class="search-box">
+              <input 
+                type="text" 
+                class="search-input" 
+                placeholder="Wyszukaj w sieci..."
+              />
+              <button class="search-btn">Szukaj</button>
+            </div>
+          </div>
+        </section>
+
+        <section id="search-page" class="page">
+          <div class="search-container">
+            <h2>Wyszukiwarka</h2>
+            <input 
+              type="text" 
+              class="search-input-full" 
+              placeholder="Wpisz zapytanie..."
+            />
+            <div class="search-results"></div>
+          </div>
+        </section>
+
+        <section id="settings-page" class="page">
+          <div class="settings-container">
+            <h2>Ustawienia</h2>
+            <div class="settings-item">
+              <label>
+                <input type="checkbox" checked /> Ciemny motyw
+              </label>
+            </div>
+            <div class="settings-item">
+              <label>
+                <input type="checkbox" checked /> Bloker śledzenia
+              </label>
+            </div>
+            <div class="settings-item">
+              <label>
+                <input type="checkbox" /> Powiadomienia
+              </label>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
